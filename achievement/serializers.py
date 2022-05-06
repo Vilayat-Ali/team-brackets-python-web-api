@@ -4,13 +4,16 @@ from rest_framework import serializers
 from member.models import member as memberModel
 from .models import achievement
 
-class achievementMemberSerializer(serializers.ModelSerializer):
+class memberSerializer(serializers.ModelSerializer):
+    role = serializers.StringRelatedField(many=True)
+    skill = serializers.StringRelatedField(many=True)
+    nationality = serializers.StringRelatedField(many=False)
     class Meta:
         model = memberModel
-        fields = ['id', 'name']
+        fields = ['id', 'name', '']
 
 class achievementSerializer(serializers.ModelSerializer):
-    team = achievementMemberSerializer(many=True, read_only=True)
+    team = memberSerializer(many=True, read_only=True)
     class Meta:
         model = achievement
         fields = '__all__'
