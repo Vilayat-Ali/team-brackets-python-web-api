@@ -11,11 +11,6 @@ class memberSkillSerializer(serializers.ModelSerializer):
         model = memberSkill
         fields = ['skill']
 
-class memberNationalitySerializer(serializers.ModelSerializer):
-    class Meta:
-        model = memberNationalitie
-        fields = ['nationality']
-
 class memberSerializer(serializers.ModelSerializer):
     role = serializers.StringRelatedField(many=True)
     skill = serializers.StringRelatedField(many=True)

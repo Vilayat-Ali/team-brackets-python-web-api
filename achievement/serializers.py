@@ -5,12 +5,9 @@ from member.models import member as memberModel
 from .models import achievement
 
 class memberSerializer(serializers.ModelSerializer):
-    role = serializers.StringRelatedField(many=True)
-    skill = serializers.StringRelatedField(many=True)
-    nationality = serializers.StringRelatedField(many=False)
     class Meta:
         model = memberModel
-        fields = ['id', 'name', '']
+        fields = ['id', 'name']
 
 class achievementSerializer(serializers.ModelSerializer):
     team = memberSerializer(many=True, read_only=True)

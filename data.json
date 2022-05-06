@@ -1,0 +1,172 @@
+[
+ {
+  "model": "core.member.memberRole",
+  "pk": 1,
+  "fields": {"role": "Founder"}
+ },
+ {
+  "model": "core.member.memberRole",
+  "pk": 2,
+  "fields": {"role": "Frontend Developer"}
+ },
+ {
+  "model": "core.member.memberRole",
+  "pk": 3,
+  "fields": {"role": "Backend Developer"}
+ },
+ {
+  "model": "core.member.memberRole",
+  "pk": 4,
+  "fields": {"role": "Full Stack Developer"}
+ },
+ {
+  "model": "core.member.memberRole",
+  "pk": 5,
+  "fields": {"role": "Business Analyst"}
+ },
+ {
+  "model": "core.member.memberRole",
+  "pk": 6,
+  "fields": {"role": "Project Lead"}
+ },
+ {
+  "model": "core.member.memberRole",
+  "pk": 7,
+  "fields": {"role": "Graphics Designer"}
+ },
+ {
+  "model": "core.member.memberRole",
+  "pk": 8,
+  "fields": {"role": "Video Editor"}
+ },
+ {"model": "core.member.memberRole",
+  "pk": 9,
+  "fields": {"role": "Technical Writer"}
+ },
+ {
+  "model": "core.member.memberRole",
+  "pk": 10,
+  "fields": {"role": "Research Associate"}
+ },
+ {
+  "model": "core.member.memberSkill",
+  "pk": 1,
+  "fields": {"skill": "Python"}
+ },
+ {
+  "model": "core.member.memberSkill",
+  "pk": 2,
+  "fields": {"skill": "JavaScript/TypeScript"}
+ },
+ {"model": "core.member.memberSkill",
+  "pk": 3,
+  "fields": {"skill": "RUST"}
+ },
+ {
+  "model": "core.member.memberSkill",
+  "pk": 4,
+  "fields": {"skill": "C/C++"}
+ },
+ {
+  "model": "core.member.memberSkill",
+  "pk": 5,
+  "fields": {"skill": "Golang"}
+ },
+ {
+  "model": "core.member.memberSkill",
+ "pk": 6,
+  "fields": {"skill": "Java"}
+ },
+ {
+  "model": "core.member.memberSkill",
+  "pk": 7,
+  "fields": {"skill": "Swift (iOS)"}
+ },
+ {
+  "model": "core.member.memberSkill",
+  "pk": 8,
+  "fields": {"skill": "Node.js"}
+ },
+ {
+  "model": "core.member.memberSkill",
+  "pk": 9,
+  "fields": {"skill": "MERN Stack"}
+ },
+ {
+  "model": "core.member.memberSkill",
+  "pk": 10,
+  "fields": {"skill": "MEAN Stack"}
+ },
+ {
+  "model": "core.member.memberSkill",
+  "pk": 11,
+  "fields": {"skill": "GraphQL"}
+ },
+ {
+  "model": "core.member.memberSkill",
+  "pk": 12,
+  "fields": {"skill": "Django/Flask"}
+ },
+ {
+  "model": "core.member.memberSkill",
+  "pk": 13,
+  "fields": {"skill": "RDMS/SQL"}
+ },
+ {
+  "model": "core.member.memberSkill",
+  "pk": 14,
+  "fields": {"skill": "MongoDB"}
+ },
+ {
+  "model": "core.member.memberSkill",
+  "pk": 15,
+  "fields": {"skill": "React-Native"}
+ },
+ {
+  "model": "core.member.memberSkill",
+  "pk": 16,
+  "fields": {"skill": "Android"}
+ },
+ {"model": "core.member.memberSkill",
+  "pk": 17,
+  "fields": {"skill": "Blockchain"}
+ },
+ {"model": "core.member.memberSkill",
+  "pk": 18,
+  "fields": {"skill": "React.js"}
+ },
+ {"model": "core.member.memberSkill",
+  "pk": 19,
+  "fields": {"skill": "AI/ML"}
+ },
+ {"model": "core.member.memberSkill",
+  "pk": 20,
+  "fields": {"skill": "Data Science"}
+ },
+ {"model": "core.member.memberSkill",
+  "pk": 21,
+  "fields": {"skill": "UI/UX"}
+ },
+ {"model": "core.member.memberSkill",
+  "pk": 22,
+  "fields": {"skill": "Project Management"}
+ },
+ {"model": "core.member.memberSkill",
+  "pk": 23, "fields": {"skill": "Business Analysis"}
+ },
+ {"model": "core.member.memberSkill",
+  "pk": 24, "fields": {"skill": "Creative Designs"}
+ },
+ {"model": "core.member.memberSkill",
+  "pk": 25, "fields": {"skill": "GSuite"}
+ },
+ {"model": "core.member.memberSkill",
+  "pk": 26, "fields": {"skill": "DevOps"}
+ },
+ {"model": "core.member.memberSkill",
+  "pk": 27, "fields": {"skill": "Technical Writing"}
+ },
+ {"model": "core.member.memberSkill",
+  "pk": 28, "fields": {"skill": "Technical Presentation"}
+ }
+]

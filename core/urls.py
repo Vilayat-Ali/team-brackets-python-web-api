@@ -3,8 +3,9 @@ from django.urls import path, include
 
 # admin dashboard customization
 admin.site.site_header = "Team Brackets Admin"
-admin.site.index_title = "Admin Dashboard"
 admin.site.site_title = "Team Brackets"
+admin.site.index_title = "Admin Dashboard"
+
 
 
 urlpatterns = [
