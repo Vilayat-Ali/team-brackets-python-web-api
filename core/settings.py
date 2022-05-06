@@ -33,6 +33,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'member.apps.MemberConfig',
     'achievement.apps.AchievementConfig',
+    'project.apps.ProjectConfig',
 ]
 
 MIDDLEWARE = [
