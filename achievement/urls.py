@@ -4,5 +4,5 @@ from django.urls import path
 from .views import *
 
 urlpatterns = [
-    path('all', getAllAchievements, name="get_all_achievements"),
+    path('<int:page>/<int:limit>', getAchievements, name="get_all_achievements"),
 ]

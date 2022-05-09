@@ -10,10 +10,12 @@ from .serializers import achievementSerializer
 
 # get all achievements
 @api_view(['GET'])
-def getAllAchievements(request):
+def getAchievements(request, page, limit):
     try:
-        achievements = achievement.objects.all()
-        serialized_achievements = achievementSerializer(achievements, many=True).data
+        start = (page - 1) * limit
+        end = page * limit
+        achievements = reversed(achievement.objects.all())
+        serialized_achievements = achievementSerializer(achievements, many=True).data[start:end]
         return Response({ 'ok': True, 'message': 'fetched achievements successfully...', 'achievements': serialized_achievements})
     except Exception as e:
         return Response({ 'ok': False, 'message': str(e)})

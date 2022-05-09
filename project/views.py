@@ -24,12 +24,38 @@ def getAllProject(request):
 @api_view(['GET'])
 def getSpecificProject(request, idTag):
     try:
-        project = projectModel.objects.filter(id = idTag)
-        serialized_project = projectSerializer(project, many=True) 
+        project = projectModel.objects.get(id = idTag)
+        serialized_project = projectSerializer(project, many=False)
         return Response({
             'ok': True,
             'message': 'Projects retrieved successfully...',
             'product': serialized_project.data
         })
     except Exception as e:
-        return Response({ 'ok': False, 'message': e })
+        return Response({ 'ok': False, 'message': str(e)})
+
+@api_view(['GET'])
+def getProjectByHack(request, hack):
+    try:
+        project = projectModel.objects.get(hackathon__hackathon_name=hack)
+        serialized_project = projectSerializer(project, many=False)
+        return Response({
+            'ok': True,
+            'message': 'Projects retrieved successfully...',
+            'product': serialized_project.data
+        })
+    except Exception as e:
+        return Response({'ok': False, 'message': str(e)})
+
+@api_view(['GET'])
+def getProjectByProjectName(request, projectName):
+    try:
+        project = projectModel.objects.get(project_name=projectName)
+        serialized_project = projectSerializer(project, many=False)
+        return Response({
+            'ok': True,
+            'message': 'Projects retrieved successfully...',
+            'product': serialized_project.data
+        })
+    except Exception as e:
+        return Response({'ok': False, 'message': str(e)})

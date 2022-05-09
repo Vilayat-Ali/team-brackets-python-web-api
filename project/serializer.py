@@ -10,7 +10,7 @@ class memberSerializer(serializers.ModelSerializer):
 
 class projectSerializer(serializers.ModelSerializer):
     contributors = memberSerializer(many=True, read_only=True)
-    hackathon = serializers.StringRelatedField(many=True)
+    hackathon = serializers.StringRelatedField(many=False)
     tech = serializers.StringRelatedField(many=True)
     class Meta:
         model = project 

@@ -2,6 +2,7 @@ from rest_framework import serializers
 
 # importing model
 from member.models import member as memberModel
+from project.models import project as projectModel
 from .models import achievement
 
 class memberSerializer(serializers.ModelSerializer):
