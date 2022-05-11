@@ -1,3 +1,8 @@
+import django_heroku
+import dj_database_url
+import os
+from decouple import config
+
 # setting up the environment variables
 import environ
 env = environ.Env()
@@ -47,6 +52,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'core.urls'
@@ -117,6 +123,8 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
@@ -140,3 +148,6 @@ CLOUDINARY_STORAGE = {
     'API_KEY': env('CLOUDINARY_API_KEY'),
     'API_SECRET': env('CLOUDINARY_API_SECRET')
 }
+
+# heroku setting
+django_heroku.settings(locals())
