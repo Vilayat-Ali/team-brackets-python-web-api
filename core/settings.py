@@ -29,7 +29,6 @@ ALLOWED_HOSTS = ['127.0.0.1', 'https://www.team-brackets.in', 'https://team-brac
 # Application definition
 
 INSTALLED_APPS = [
-    'whitenoise.runserver_nostatic',
     'jazzmin',
     'django.contrib.admin',
     'django.contrib.auth',
