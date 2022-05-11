@@ -11,6 +11,7 @@ class tech(models.Model):
         return self.tech
 
 class project(models.Model):
+    project_image = models.ImageField(upload_to="project-image/", blank=False)
     project_name = models.CharField(max_length=55, blank=False, unique=True)
     description = models.TextField(max_length=250, blank=False, unique=False)
     contributors = models.ManyToManyField(memberModel)

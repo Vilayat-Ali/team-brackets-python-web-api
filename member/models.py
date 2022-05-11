@@ -15,6 +15,7 @@ class memberSkill(models.Model):
 
 # member model
 class member(models.Model):
+    image = models.ImageField(upload_to='member-image/', blank=False)
     name = models.CharField(max_length=25, blank=False, null=False)
     role = models.ManyToManyField(memberRole)
     skill = models.ManyToManyField(memberSkill)

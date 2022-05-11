@@ -5,6 +5,7 @@ environ.Env.read_env()
 
 # setting up the path
 from pathlib import Path
+import cloudinary
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -29,7 +30,9 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
+    'cloudinary_storage',
     'django.contrib.staticfiles',
+    'cloudinary',
     'rest_framework',
     'member.apps.MemberConfig',
     'achievement.apps.AchievementConfig',
@@ -120,8 +123,20 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Rest framework
-# REST_FRAMEWORK = {
-#     'DEFAULT_RENDERER_CLASSES': (
-#         'rest_framework.renderers.JSONRenderer',
-#     )
-# }
+REST_FRAMEWORK = {
+    'DEFAULT_RENDERER_CLASSES': (
+        'rest_framework.renderers.JSONRenderer',
+    )
+}
+
+# setting up cloudinary
+
+## media settings
+MEDIA_URL = '/team-brackets-media/'  # or any prefix you choose
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME': env('CLOUDINARY_NAME'),
+    'API_KEY': env('CLOUDINARY_API_KEY'),
+    'API_SECRET': env('CLOUDINARY_API_SECRET')
+}
